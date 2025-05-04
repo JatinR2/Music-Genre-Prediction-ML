@@ -1,0 +1,8 @@
+/.venv
+/hist_cnn1.pkl
+/hist_cnn2.pkl
+/hist_dnn1.pkl
+/model_cnn1.h5
+/model_cnn2.h5
+/model_dnn1.h5
+/Data

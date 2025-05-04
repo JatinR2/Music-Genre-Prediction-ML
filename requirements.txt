@@ -1,0 +1,5 @@
+flask==2.0.1
+tensorflow==2.10.0
+numpy==1.21.0
+librosa==0.9.1
+Werkzeug==2.0.1 
