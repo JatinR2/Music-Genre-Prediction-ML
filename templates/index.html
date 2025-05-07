@@ -257,7 +257,7 @@
             <h3 class="mb-4">Prediction Results</h3>
             
             <div class="result-card">
-                <h4>DNN Model Prediction</h4>
+                <h4>Dense Neural Network Model Prediction</h4>
                 <p>Genre: <strong>{{ genre_dnn }}</strong></p>
                 <p>Confidence: {{ "%.2f"|format(conf_dnn) }}%</p>
                 <div class="confidence-bar">
@@ -266,7 +266,7 @@
             </div>
 
             <div class="result-card">
-                <h4>CNN Model 1 Prediction</h4>
+                <h4>Convolutional Neural Network (Without Regularization) Prediction</h4>
                 <p>Genre: <strong>{{ genre_cnn1 }}</strong></p>
                 <p>Confidence: {{ "%.2f"|format(conf_cnn1) }}%</p>
                 <div class="confidence-bar">
@@ -275,11 +275,36 @@
             </div>
 
             <div class="result-card">
-                <h4>CNN Model 2 Prediction</h4>
+                <h4>Convolutional Neural Network (With Regularization) Prediction</h4>
                 <p>Genre: <strong>{{ genre_cnn2 }}</strong></p>
                 <p>Confidence: {{ "%.2f"|format(conf_cnn2) }}%</p>
                 <div class="confidence-bar">
                     <div class="confidence-fill" style="width: {{ conf_cnn2 }}%"></div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h4>Convolutional Neural Network (With Regularization and Data Augmentation) Prediction</h4>
+                <p>Genre: <strong>{{ genre_cnn3 }}</strong></p>
+                <p>Confidence: {{ "%.2f"|format(conf_cnn3) }}%</p>
+                <div class="confidence-bar">
+                    <div class="confidence-fill" style="width: {{ conf_cnn2 }}%"></div>
+                </div>
+            </div>
+            <div class="result-card">
+                <h4>Transformer Model Prediction</h4>
+                <p>Genre: <strong>{{ genre_transformer }}</strong></p>
+                <p>Confidence: {{ "%.2f"|format(conf_transformer) }}%</p>
+                <div class="confidence-bar">
+                    <div class="confidence-fill" style="width: {{ conf_transformer }}%"></div>
+                </div>
+            </div>
+            <div class="result-card">
+                <h4>Recurrent Neural Network Model Prediction</h4>
+                <p>Genre: <strong>{{ genre_rnn }}</strong></p>
+                <p>Confidence: {{ "%.2f"|format(conf_rnn) }}%</p>
+                <div class="confidence-bar">
+                    <div class="confidence-fill" style="width: {{ conf_rnn }}%"></div>
                 </div>
             </div>
         </div>

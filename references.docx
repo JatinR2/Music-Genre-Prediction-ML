@@ -1,0 +1,31 @@
+References
+
+[1] T. Lidy and A. Schindler, "CQT-based convolutional neural networks for audio scene classification and domestic audio tagging," in Proc. IEEE Int. Conf. Acoust., Speech Signal Process., 2016, pp. 1-5.
+
+[2] J. Pons, O. Nieto, M. Prockup, E. Schmidt, A. Ehmann, and X. Serra, "End-to-end learning for music audio tagging at scale," in Proc. Int. Soc. Music Inf. Retrieval Conf., 2018, pp. 637-644.
+
+[3] K. Choi, G. Fazekas, M. Sandler, and K. Cho, "Convolutional recurrent neural networks for music classification," in Proc. IEEE Int. Conf. Acoust., Speech Signal Process., 2017, pp. 2392-2396.
+
+[4] S. I. Mimilakis, K. Drossos, T. Virtanen, and G. Schuller, "Deep neural networks for dynamic range compression in mastering applications," in Proc. Audio Eng. Soc. Conf., 2017, pp. 1-10.
+
+[5] M. Defferrard, K. Benzi, P. Vandergheynst, and X. Bresson, "FMA: A dataset for music analysis," in Proc. Int. Soc. Music Inf. Retrieval Conf., 2017, pp. 316-323.
+
+[6] B. McFee, C. Raffel, D. Liang, D. P. Ellis, M. McVicar, E. Battenberg, and O. Nieto, "librosa: Audio and music signal analysis in python," in Proc. Python Sci. Conf., 2015, pp. 18-25.
+
+[7] F. Pedregosa et al., "Scikit-learn: Machine learning in Python," J. Mach. Learn. Res., vol. 12, pp. 2825-2830, 2011.
+
+[8] A. Mesaros, T. Heittola, and T. Virtanen, "TUT database for acoustic scene classification and sound event detection," in Proc. Eur. Signal Process. Conf., 2016, pp. 1128-1132.
+
+[9] J. C. Brown, "Calculation of a constant Q spectral transform," J. Acoust. Soc. Amer., vol. 89, no. 1, pp. 425-434, 1991.
+
+[10] G. Tzanetakis and P. Cook, "Musical genre classification of audio signals," IEEE Trans. Speech Audio Process., vol. 10, no. 5, pp. 293-302, 2002.
+
+[11] E. Pampalk, A. Flexer, and G. Widmer, "Improvements of audio-based music similarity and genre classification," in Proc. Int. Soc. Music Inf. Retrieval Conf., 2005, pp. 628-633.
+
+[12] Y. Han, J. Kim, and K. Lee, "Deep convolutional neural networks for predominant instrument recognition in polyphonic music," IEEE/ACM Trans. Audio, Speech, Lang. Process., vol. 25, no. 1, pp. 208-221, 2017.
+
+[13] S. Dieleman and B. Schrauwen, "End-to-end learning for music audio," in Proc. IEEE Int. Conf. Acoust., Speech Signal Process., 2014, pp. 6964-6968.
+
+[14] A. van den Oord, S. Dieleman, and B. Schrauwen, "Deep content-based recommendations for music," in Proc. Int. Conf. Mach. Learn., 2013, pp. 1-9.
+
+[15] M. Hamel and D. Eck, "Learning features from music audio with deep belief networks," in Proc. Int. Soc. Music Inf. Retrieval Conf., 2010, pp. 339-344. 

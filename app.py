@@ -6,6 +6,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 import pickle
 from werkzeug.utils import secure_filename
+from transformer_model import TransformerBlock 
 
 app = Flask(__name__, static_folder='static')
 app.secret_key = 'your_secret_key_here'  # Required for flashing messages
@@ -23,7 +24,9 @@ os.makedirs('static/assets', exist_ok=True)
 model_dnn = load_model('model_dnn1.h5')
 model_cnn1 = load_model('model_cnn1.h5')
 model_cnn2 = load_model('model_cnn2.h5')
-
+model_cnn3 = load_model('model_cnn3.h5')
+model_transformer = load_model('model_transformer.h5', custom_objects={'TransformerBlock': TransformerBlock})
+model_rnn = load_model('model_rnn.h5')
 # Genre mapping (adjust according to your model's output)
 GENRES = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
 
@@ -76,17 +79,23 @@ def upload_file():
                 pred_dnn = model_dnn.predict(mfccs)
                 pred_cnn1 = model_cnn1.predict(mfccs)
                 pred_cnn2 = model_cnn2.predict(mfccs)
-                
+                pred_cnn3 = model_cnn3.predict(mfccs)
+                pred_transformer = model_transformer(mfccs)
+                pred_rnn = model_rnn.predict(mfccs)
                 # Get genre predictions
                 genre_dnn = GENRES[np.argmax(pred_dnn[0])]
                 genre_cnn1 = GENRES[np.argmax(pred_cnn1[0])]
                 genre_cnn2 = GENRES[np.argmax(pred_cnn2[0])]
-                
+                genre_cnn3 = GENRES[np.argmax(pred_cnn3[0])]
+                genre_transformer = GENRES[np.argmax(pred_transformer[0])]
+                genre_rnn = GENRES[np.argmax(pred_rnn[0])]
                 # Get confidence scores
                 conf_dnn = float(np.max(pred_dnn[0]) * 100)
                 conf_cnn1 = float(np.max(pred_cnn1[0]) * 100)
                 conf_cnn2 = float(np.max(pred_cnn2[0]) * 100)
-                
+                conf_cnn3 = float(np.max(pred_cnn3[0]) * 100)
+                conf_transformer = float(np.max(pred_transformer[0]) * 100)
+                conf_rnn = float(np.max(pred_rnn[0]) * 100)
                 # Clean up the uploaded file
                 os.remove(filepath)
                 
@@ -94,9 +103,15 @@ def upload_file():
                                      genre_dnn=genre_dnn,
                                      genre_cnn1=genre_cnn1,
                                      genre_cnn2=genre_cnn2,
+                                     genre_cnn3=genre_cnn3,
+                                     genre_transformer=genre_transformer,
+                                     genre_rnn=genre_rnn,
                                      conf_dnn=conf_dnn,
                                      conf_cnn1=conf_cnn1,
-                                     conf_cnn2=conf_cnn2)
+                                     conf_cnn2=conf_cnn2,
+                                     conf_cnn3=conf_cnn3,
+                                     conf_transformer=conf_transformer,
+                                     conf_rnn=conf_rnn)
                 
             except Exception as e:
                 flash(f'Error processing file: {str(e)}')

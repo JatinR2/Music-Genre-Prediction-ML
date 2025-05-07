@@ -6,3 +6,14 @@
 /model_cnn2.h5
 /model_dnn1.h5
 /Data
+/hist_cnn3.pkl
+/hist_rnn.pkl
+/hist_transformer.pkl
+/hist_rnn.h5
+/hist_transformer.h5
+/model_cnn3.h5
+/model_rnn.h5
+/model_transformer.h5
+/model_autoencoder.h5
+/model_classical.h5
+
