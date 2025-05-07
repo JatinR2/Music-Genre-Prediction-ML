@@ -16,4 +16,5 @@
 /model_transformer.h5
 /model_autoencoder.h5
 /model_classical.h5
+/__pycache__
 
